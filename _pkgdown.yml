@@ -1,0 +1,60 @@
+destination: docs
+url: https://github.com/stephenbates19/digitaltwins
+authors:
+  Stephen Bates:
+    href: https://web.stanford.edu/~stephen6/
+  Matteo Sesia:
+    href: https://web.stanford.edu/~msesia/
+navbar:
+  structure:
+    left:  [home, intro, getting_started, reference, articles, tutorials, news]
+    right: [github]
+  components:
+    getting_started:
+      text: "Getting Started"
+      href: "articles/first_steps.html"
+reference:
+- title: Digital Twin Test
+  desc: >
+    Functions for running versions of the DTT.
+    These functions are the core external-facing functions 
+    of this package.
+  contents:
+  - linear_crt
+  - linear_crt_indep
+  - conditional_tdt
+- title: "Misc Other Functions"
+  desc: >
+    Functions for processing DTT p-values, 
+    creating a synthetic population, and running
+    the usual TDT.
+  contents:
+  - accum_test
+  - generate_offspring
+  - haps_to_gen
+  - tdt
+- title: Data Sets
+  desc: "Sample data sets."
+  contents:
+  - haps_matrix
+- title: Internal functions
+  desc: >
+    These functions are intended only for internal use.
+  contents:
+  - col_cors
+  - create_offspring_population
+  - deviance_test_stats
+  - find_mate_pair
+  - forward_backward_
+  - gen_id_to_haps
+  - generate_ancestry
+  - get_beta_glmnet
+  - get_fb_results
+  - get_genotype_ids
+  - get_phased_ancestry
+  - haps_id_to_gen
+  - hinge_exp
+  - impute_variant_fast
+  - logistic_ll
+  - sample_ancestry_
+  - sample_parity_poisson

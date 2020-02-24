@@ -1,0 +1,24 @@
+Package: digitaltwins
+Title: Causal inference for SNPs
+Version: 0.1
+Authors@R: c(person("Stephen", "Bates", email = "stephen.bates19@gmail.com",
+                  role = "cre"), 
+            person("Matteo", "Sesia", email = "msesia@stanford.edu",
+                  role = "ctb"))     
+Encoding: UTF-8
+RoxygenNote: 6.1.1
+License: MIT + file LICENSE
+URL: https://github.com/stephenbates19/digitaltwins
+LinkingTo: 
+    Rcpp
+Imports: 
+    Rcpp,
+    pbapply
+Suggests:
+    doMC,
+    doRNG,
+    glmnet,
+    knitr,
+    rmarkdown,
+    BiocParallel,
+VignetteBuilder: knitr
