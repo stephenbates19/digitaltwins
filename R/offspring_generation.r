@@ -7,11 +7,12 @@
 #' @param x2 A second parental haplotype, a vector of length p with each entry 0 or 1.
 #' @param d vector of genetic distances between sites. Should be the same length as x1. 
 #' @param lambda recombination rate per unit of genetic distance
+#' @param epsilon de novo mutation rate
 #
 # Returns:
 #' @return Offspring haplotype. A vector of length equal to x1 with each entry 0 or 1.
 #' @export
-generate_offspring = function(x1, x2, z = NULL, d = NULL, lambda = .012) {
+generate_offspring = function(x1, x2, z = NULL, d = NULL, lambda = .012, epsilon = .00000001) {
   if(is.null(d)) {d = x1 * 0 + 1}
   if(is.null(z)) {
     z = generate_ancestry(d, lambda)
@@ -19,6 +20,9 @@ generate_offspring = function(x1, x2, z = NULL, d = NULL, lambda = .012) {
   x = rep(0, length(x1))
   x[z == 0] = x1[z == 0]
   x[z == 1] = x2[z == 1]
+
+  noise = rbinom(length(x), 1, epsilon)
+  x[noise == 1] = 1 - x[noise == 1] 
   
   return(x)
 }

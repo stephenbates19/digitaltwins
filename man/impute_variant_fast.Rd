@@ -5,7 +5,7 @@
 \title{Imputes a set of variants}
 \usage{
 impute_variant_fast(x, p1, p2, group, d, fb_result = NULL,
-  lambda = 0.012, epsilon = 0.001, window_size = 200)
+  lambda = 0.012, epsilon = 1e-08, window_size = 200)
 }
 \arguments{
 \item{x}{0-1 vector of length p. The observed haplotypes of the offspring.}

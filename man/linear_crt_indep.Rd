@@ -7,7 +7,7 @@
 linear_crt_indep(H, H_parent, anc, Y, beta, groups, d, adjust = NULL,
   test_idx = 1:nrow(H), family = "gaussian", n_reps = 100,
   genotypes = TRUE, verbose = FALSE, parallel = FALSE,
-  recomb_thresh = 0.001, f_stat = TRUE)
+  recomb_thresh = 1e-08, f_stat = TRUE)
 }
 \arguments{
 \item{H}{an (2n x p) matrix of the subject haplotypes.

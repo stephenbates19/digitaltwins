@@ -5,7 +5,7 @@
 \title{Forward-backward algorithm for parent-offspring trio of haplotypes}
 \usage{
 get_fb_results(H, H_parent, anc, group, d, lambda = 0.012,
-  epsilon = 0.001, window_size = 200)
+  epsilon = 1e-08, window_size = 200)
 }
 \arguments{
 \item{H}{an (n x p) matrix of the subject haplotypes}

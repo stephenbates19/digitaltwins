@@ -191,7 +191,7 @@ deviance_test_stats <- function(pred_base, x, y, family="gaussian") {
 linear_crt <- function(H, H_parent, anc, Y, beta, group, d, adjust = NULL,
                        test_idx = 1:nrow(H), family = "gaussian", n_reps = 100,
                        genotypes = TRUE, verbose = FALSE, parallel = FALSE,
-                       recomb_thresh = 0.001, f_stat = FALSE) {
+                       recomb_thresh = 0.00000001, f_stat = FALSE) {
 
   stopifnot( is.matrix(H) )
   stopifnot( is.matrix(H_parent) )
@@ -404,7 +404,7 @@ linear_crt <- function(H, H_parent, anc, Y, beta, group, d, adjust = NULL,
 linear_crt_indep <- function(H, H_parent, anc, Y, beta, groups, d, adjust = NULL,
                        test_idx = 1:nrow(H), family = "gaussian", n_reps = 100,
                        genotypes = TRUE, verbose = FALSE, parallel = FALSE,
-                       recomb_thresh = 0.001, f_stat = TRUE) {
+                       recomb_thresh = 0.00000001, f_stat = TRUE) {
 
   stopifnot( is.matrix(H) )
   stopifnot( is.matrix(H_parent) )

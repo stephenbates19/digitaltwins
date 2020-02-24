@@ -204,7 +204,7 @@ p_value
 <p>If we instead test a region that does not contain a causal variant, we will find a p-value that is not siginificant.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">test_region &lt;-<span class="st"> </span><span class="dv">400</span><span class="op">:</span><span class="dv">500</span>
 <span class="kw"><a href="https://rdrr.io/r/base/sum.html">sum</a></span>(causal_variants <span class="op">%in%</span><span class="st"> </span>test_region) <span class="co">#number of causal variants in the test region</span>
-<span class="co">#&gt; [1] 0</span></code></pre></div>
+<span class="co">#&gt; [1] 1</span></code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p_value &lt;-<span class="st"> </span>digitaltwins<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/digitaltwins/man/linear_crt.html">linear_crt</a></span>(offspring_haps, parent_haps, anc, Y_offspring, 
                       <span class="kw"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span>(beta_hat, <span class="dt">ncol =</span> <span class="dv">1</span>), 
                       <span class="dt">group =</span> test_region, <span class="dt">d =</span> d, <span class="dt">family =</span> <span class="st">"gaussian"</span>)
@@ -217,7 +217,7 @@ p_value
 
 <span class="co">#non-null p-value</span>
 p_value 
-<span class="co">#&gt; [1] 1</span></code></pre></div>
+<span class="co">#&gt; [1] 0.00990099</span></code></pre></div>
 </div>
   </div>
 

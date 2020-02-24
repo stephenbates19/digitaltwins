@@ -60,7 +60,7 @@ sample_parity_poisson <- function(lambda, parity = "even") {
 #' @return A vector of the same length as \code{group} containing the imputed variants.
 #' @export
 impute_variant_fast <- function(x, p1, p2, group, d, fb_result = NULL,
-                                lambda = .012, epsilon = .001, window_size = 200) {
+                                lambda = .012, epsilon = .00000001, window_size = 200) {
   start <- group[1]
   end <- group[length(group)]
   p <- length(x)
@@ -152,7 +152,7 @@ impute_variant_fast <- function(x, p1, p2, group, d, fb_result = NULL,
 # Returns:
 #' @return a (n x 3) matrix giving the results of the forward-backward algorithm.
 #' See the documentation of the \code{forward_backward_} function for output information.
-get_fb_results <- function(H, H_parent, anc, group, d, lambda = .012, epsilon = .001, window_size = 200) {
+get_fb_results <- function(H, H_parent, anc, group, d, lambda = .012, epsilon = .00000001, window_size = 200) {
   start <- group[1]
   end <- group[length(group)]
   p <- ncol(H)
